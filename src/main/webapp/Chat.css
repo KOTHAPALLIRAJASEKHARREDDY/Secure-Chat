@@ -1,0 +1,116 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+canvas#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    color: #FFA500;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 0 0 10px #FFA500;
+}
+
+.chat-input {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-input input[type="text"] {
+    padding: 10px;
+    width: 400px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 2px solid #FFA500;
+    background-color: black;
+    color: #FFA500;
+}
+
+.chat-input button {
+    background-color: black;
+    color: #FFA500;
+    border: 2px solid #FFA500;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.chat-input button:hover {
+    background-color: #FFA500;
+    color: black;
+}
+
+/* Common styles for other pages like create/join room */
+.form-container {
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(0,0,0,0.8);
+    width: 400px;
+    border-radius: 10px;
+    border: 2px solid #FFA500;
+}
+
+.form-container input,
+.form-container button {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.form-container input {
+    border: 2px solid #FFA500;
+    background: black;
+    color: #FFA500;
+}
+
+.form-container button {
+    background: black;
+    color: #FFA500;
+    border: 2px solid #FFA500;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #FFA500;
+    color: black;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px black inset !important;
+    -webkit-text-fill-color: orange !important;
+    border: 2px solid orange !important;
+    transition: background-color 9999s ease-in-out 0s, color 9999s ease-in-out 0s;
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px orange, 0 0 10px orange;
+    }
+    to {
+        text-shadow: 0 0 20px orange, 0 0 30px orange;
+    }
+}
