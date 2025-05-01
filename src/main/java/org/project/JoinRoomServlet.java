@@ -1,18 +1,14 @@
 package org.project;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-
-
-
 import jakarta.servlet.http.*;
 
-@WebServlet("/joinroom")
+
 
 public class JoinRoomServlet extends HttpServlet {
     @Override
@@ -26,6 +22,7 @@ public class JoinRoomServlet extends HttpServlet {
             HttpSession session = req.getSession();
             session.setAttribute("username", username);
             session.setAttribute("roomId", roomId);
+
             resp.sendRedirect("chat.jsp?room=" + roomId);
         } else {
             req.setAttribute("error", "Invalid or expired room code.");
