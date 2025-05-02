@@ -1,0 +1,11 @@
+CREATE DATABASE secure_chat CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE secure_chat;
+
+CREATE TABLE chat_message (
+  id        BIGINT AUTO_INCREMENT PRIMARY KEY,
+  room_id   VARCHAR(100) NOT NULL,
+  username  VARCHAR(100) NOT NULL,
+  message   TEXT NOT NULL,
+  sent_at   TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX(room_id)
+);
